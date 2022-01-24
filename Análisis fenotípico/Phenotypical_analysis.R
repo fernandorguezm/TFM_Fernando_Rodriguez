@@ -585,18 +585,3 @@ ggsave(
   height = 7,
   dpi = 500
 )
-
-# Tests
-
-data <- read.csv(file = "Archivos/Mesotaenium_cell_length_dens.csv", sep = ";")
-tail(data)
-data$Light.intensity <- factor(data$Light.intensity, levels=c("1", "10", "100"))
-
-
-ggplot(data, aes(x=Light.intensity, y=Cell.length, group=interaction(Light.intensity, Temperature))) + 
-  geom_violin()
-
-data <- data[3565:6353,]
-
-ggplot(data, aes(x=Cell.length, group=interaction(Light.intensity, Temperature))) + 
-  geom_density(alpha=0.6)
