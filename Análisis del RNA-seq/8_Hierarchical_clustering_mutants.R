@@ -1,3 +1,7 @@
+# Author: Fernando Rodríguez Marín
+# Contact: fernando.rodriguez.marin8@gmail.com
+# Project: master's thesis
+
 library(tidyverse)
 library(cluster)
 library(pheatmap)
